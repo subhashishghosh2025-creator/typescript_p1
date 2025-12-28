@@ -22,3 +22,31 @@ function addManyNUmbers(a:number, b:number, ...restNumbers:number[]) {
 
 console.log(addManyNUmbers(1,2,3));
 console.log(addManyNUmbers(1,2,3,7,8,9,3));
+//==================
+
+
+interface Shape {
+     getArea() : number;
+}
+
+class Rectangle implements Shape {
+
+    private width:number;
+    private breadth:number;
+
+    public constructor(width:number,breadth:number) {
+        this.width = width;
+        this.breadth = breadth;
+    }
+
+    public getArea():number {
+
+        return this.breadth * this.width;
+    }
+}
+
+const r1 = new Rectangle(7,5);
+const r2 = new Rectangle(20,50);
+
+ console.log("R1 Area : ", r1.getArea());
+  console.log("R2 Area : ", r2.getArea());
